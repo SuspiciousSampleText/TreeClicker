@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Shop Events</name>
+    <events>
+        <event-block sid="520858586547957">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="1265950488112404" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4895550656636369" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9342838007835975">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3192311522396057" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8579707026541154" type="NoWood">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3819604686601395" type="NoWoodText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="66300468552079">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="703966112822824" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="527028696808009" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">Wood.Extra</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1746519463080668">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4278684917218595" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9823510293224978" type="Wood">
+                    <param id="0" name="Text">int(Wood.Wood)</param>
+                </action>
+                <action id="0" name="Set text" sid="6031635294305623" type="ITEM1">
+                    <param id="0" name="Text">&quot;Your axe gets double efficiency. Cost &quot; &amp; int(Wood.Cost1)</param>
+                </action>
+                <action id="0" name="Set text" sid="3430537900191966" type="ITEM2">
+                    <param id="0" name="Text">&quot;Hire townsfolk to get wood. Cost: &quot; &amp; int(Wood.Cost2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6386211914578799">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6487753337135487" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ExitShop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5874462922342123" type="ShopBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2778117725553526" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="4657186654253788" type="ShopBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6472722303192716" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5587927543384179">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6464194790236414" type="Touch">
+                    <param id="0" name="Object">MainTree</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="2341201577867262" type="ShopBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6918459627842045" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="9318862367178149" type="ShopBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="2845455414438633" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="114154725758575">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1150693440492282" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BUY1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1925337102190802" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">ITEM1.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2518808040545374" type="Wood">
+                    <param id="0" name="Instance variable">Click</param>
+                    <param id="1" name="Value">Wood.Click * 2</param>
+                </action>
+                <action id="5" name="Set frame" sid="588884497296448" type="BuyBack1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="4601246071515994" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="1779167241419745" type="BuyBack1">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="5992507581108021" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">ITEM1.Cost</param>
+                </action>
+                <action id="-10" name="Set value" sid="4106898617227285" type="ITEM1">
+                    <param id="0" name="Instance variable">Cost</param>
+                    <param id="1" name="Value">ITEM1.Cost + ((ITEM1.Cost/100) * 90)</param>
+                </action>
+                <action id="-10" name="Set value" sid="1605895438777942" type="Wood">
+                    <param id="0" name="Instance variable">Cost1</param>
+                    <param id="1" name="Value">ITEM1.Cost</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4650196766849252">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5173563187038071" type="Touch">
+                    <param id="0" name="Object">MainTree</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1804195562478092" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">ITEM1.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="982718757954637" type="Wood">
+                    <param id="0" name="Instance variable">Click</param>
+                    <param id="1" name="Value">Wood.Click * 2</param>
+                </action>
+                <action id="5" name="Set frame" sid="9387627599957767" type="BuyBack1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2837721870214503" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="3555832975684057" type="BuyBack1">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="4596443849312988" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">ITEM1.Cost</param>
+                </action>
+                <action id="-10" name="Set value" sid="9517360051987227" type="ITEM1">
+                    <param id="0" name="Instance variable">Cost</param>
+                    <param id="1" name="Value">ITEM1.Cost + ((ITEM1.Cost/100) * 90)</param>
+                </action>
+                <action id="-10" name="Set value" sid="4801367141696441" type="Wood">
+                    <param id="0" name="Instance variable">Cost1</param>
+                    <param id="1" name="Value">ITEM1.Cost</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7464930740316338">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="630794280004238" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BUY2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="437479962668371" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">ITEM2.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="8144855512264395" type="Wood">
+                    <param id="0" name="Instance variable">Extra</param>
+                    <param id="1" name="Value">1.0</param>
+                </action>
+                <action id="5" name="Set frame" sid="2472600576156629" type="BuyBack2">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2627856507316653" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="4041607218417464" type="BuyBack2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="9678822485997188" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">ITEM2.Cost</param>
+                </action>
+                <action id="-10" name="Set value" sid="4444432563264807" type="ITEM2">
+                    <param id="0" name="Instance variable">Cost</param>
+                    <param id="1" name="Value">ITEM2.Cost + ((ITEM2.Cost /100) * 10)</param>
+                </action>
+                <action id="-10" name="Set value" sid="3352630550005862" type="Wood">
+                    <param id="0" name="Instance variable">Cost2</param>
+                    <param id="1" name="Value">ITEM2.Cost</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256096010216544">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6000389155176265" type="Touch">
+                    <param id="0" name="Object">MainTree</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9024628232112923" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">ITEM2.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="5432754276880375" type="Wood">
+                    <param id="0" name="Instance variable">Extra</param>
+                    <param id="1" name="Value">1.0</param>
+                </action>
+                <action id="5" name="Set frame" sid="9406312236930898" type="BuyBack2">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8732220740016184" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="4820231075577195" type="BuyBack2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="1798184955799458" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">ITEM2.Cost</param>
+                </action>
+                <action id="-10" name="Set value" sid="6056961826210767" type="ITEM2">
+                    <param id="0" name="Instance variable">Cost</param>
+                    <param id="1" name="Value">ITEM2.Cost + ((ITEM2.Cost /100) * 10)</param>
+                </action>
+                <action id="-10" name="Set value" sid="1820646259998862" type="Wood">
+                    <param id="0" name="Instance variable">Cost2</param>
+                    <param id="1" name="Value">ITEM2.Cost</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2699662276673627">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8205033763163804" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BUY1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1713168290615148" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">ITEM1.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8904286954886676" type="NoWoodText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4191484389287917" type="NoWood">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="1319100358472753" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6566070979633581" type="NoWood">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4646688665566932" type="NoWoodText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3153089013847481">
+            <conditions>
+                <condition id="17" name="On tap object" sid="8021613240266392" type="Touch">
+                    <param id="0" name="Object">MainTree</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9481716418945508" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">ITEM1.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3913440130066914" type="NoWoodText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9512201178881309" type="NoWood">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6687072036026527" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4172243203486414" type="NoWood">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4055324926254052" type="NoWoodText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4352414849245427">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3446703421290727" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BUY2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2556444449208007" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">ITEM2.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3451143795620246" type="NoWoodText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5781920718220197" type="NoWood">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="630881706258977" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9262401315514938" type="NoWood">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1038402986480881" type="NoWoodText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="285359709520797">
+            <conditions>
+                <condition id="17" name="On tap object" sid="1994369137535078" type="Touch">
+                    <param id="0" name="Object">MainTree</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="489759404613092" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">ITEM2.Cost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5557274712583119" type="NoWoodText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9828293987325381" type="NoWood">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8518325285585837" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2445386787677474" type="NoWood">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7892157993759179" type="NoWoodText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6317233105445479">
+            <conditions>
+                <condition id="-18" name="Is in preview" sid="9992824504753006" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="9932633023065847" type="Back">
+                    <param id="0" name="Instance variable">Test</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9129949457660494" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">9000</param>
+                </action>
+                <action id="-10" name="Set value" sid="7387840345661803" type="Back">
+                    <param id="0" name="Instance variable">Test</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9724698646835855">
+            <conditions>
+                <condition id="-32" name="Is on platform" sid="5633406038979932" type="System">
+                    <param id="0" name="Platform">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="8886761259003714" type="System">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2771353598168334">
+            <conditions>
+                <condition id="-32" name="Is on platform" sid="8987236140540087" type="System">
+                    <param id="0" name="Platform">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="5987962460128851" type="System">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

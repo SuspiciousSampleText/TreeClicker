@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main Events</name>
+    <events>
+        <event-block sid="7892502690116838">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="7338257596155045" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="73418454062656" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3280473120617858">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2880127021883554" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="473507597784271" type="Wood">
+                    <param id="0" name="Text">int(wood.Wood)</param>
+                </action>
+                <action id="0" name="Set text" sid="4903594849451746" type="PerSec">
+                    <param id="0" name="Text">int(wood.Extra) &amp; &quot; per second&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1824607253278831">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9233826600121134" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="8628566832707936" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">Wood.Extra</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1701159552431654">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9255696855957285" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MainTree</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="7183377266939386" type="System">
+                    <param id="0" name="Object to create">SubTree</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">MainTree.X</param>
+                    <param id="3" name="Y">MainTree.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3349513135203462" type="SubTree">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5284045874772442" type="MainTree">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6614136822889163" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9777312291735301" type="MainTree">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6251530844878583" type="SubTree">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="470802508732272" type="SubTree" />
+                <action id="-11" name="Add to" sid="5016495272436459" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">Wood.Click</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3765163530143698">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6258791384991553" type="Touch">
+                    <param id="0" name="Object">MainTree</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3244793277620658" type="System">
+                    <param id="0" name="Object to create">SubTree</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">MainTree.X</param>
+                    <param id="3" name="Y">MainTree.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5089529223241208" type="SubTree">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1164115219748514" type="MainTree">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4415233362874713" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8688671905228926" type="MainTree">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="186524470274351" type="SubTree">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2618202790272024" type="SubTree" />
+                <action id="-11" name="Add to" sid="4703119787023559" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">Wood.Click</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2885902114891617">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5581113711725252" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ShopText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="4578874461153255" type="ShopBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9023967296917739" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="3661617896660388" type="ShopBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="593990380615783" type="System">
+                    <param id="0" name="Layout">Shop</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9013746175526908">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2637287794857091" type="Touch">
+                    <param id="0" name="Object">ShopText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="9358178339469205" type="ShopBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="4229819156507942" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="9555429100740782" type="ShopBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="8934306291824901" type="System">
+                    <param id="0" name="Layout">Shop</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6518433063566862">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7653759425702165" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">VillageText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="6947757897561792" type="VillageBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6587168492590894" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="7752548707299991" type="VillageBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="27322115471512" type="System">
+                    <param id="0" name="Layout">Village</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2366148071915451">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2752669423322011" type="Touch">
+                    <param id="0" name="Object">VillageText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="2092837519289637" type="VillageBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6328395881492733" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="6253484747164254" type="VillageBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="299153237960612" type="System">
+                    <param id="0" name="Layout">Village</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8831078433448379">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="692481374747428" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">HelpBack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="4696710531532712" type="HelpBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9215383355231447" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="2083650403926784" type="HelpBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="1164408253629462" type="System">
+                    <param id="0" name="Layout">Help</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6462121784419299">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6614899956256351" type="Touch">
+                    <param id="0" name="Object">HelpBack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="6179247823064074" type="HelpBack">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="670662429127524" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="1680261122537103" type="HelpBack">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5890416489034748" type="System">
+                    <param id="0" name="Layout">Help</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2534970647055667">
+            <conditions>
+                <condition id="-18" name="Is in preview" sid="8798630287752152" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="5631050711738266" type="Back">
+                    <param id="0" name="Instance variable">Test</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9993884277340808" type="Wood">
+                    <param id="0" name="Instance variable">Wood</param>
+                    <param id="1" name="Value">9000</param>
+                </action>
+                <action id="-10" name="Set value" sid="316086964583368" type="Back">
+                    <param id="0" name="Instance variable">Test</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1130621340048926">
+            <conditions>
+                <condition id="-32" name="Is on platform" sid="8162370785819954" type="System">
+                    <param id="0" name="Platform">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="1801653530810689" type="System">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1162721765347808">
+            <conditions>
+                <condition id="-32" name="Is on platform" sid="5465467324135085" type="System">
+                    <param id="0" name="Platform">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="7232840115245714" type="System">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

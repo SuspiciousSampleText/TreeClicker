@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Help Events</name>
+    <events>
+        <event-block sid="2793513252059605">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="3976017860415884" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2434165029303799" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2228514346176303">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3567789904170178" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">HelpExitText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="4345116133235133" type="HelpExit">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6481208553775545" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="8009225188120098" type="HelpExit">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="378527758315497" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1863031064707089">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5616618072932188" type="Touch">
+                    <param id="0" name="Object">HelpExitText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="9107997640105618" type="HelpExit">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9483737133381717" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="5985066644483619" type="HelpExit">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="9398572463093461" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6093333515898019">
+            <conditions>
+                <condition id="-32" name="Is on platform" sid="7473292815540725" type="System">
+                    <param id="0" name="Platform">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="9341084624246965" type="System">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4588034006939813">
+            <conditions>
+                <condition id="-32" name="Is on platform" sid="5532056646390893" type="System">
+                    <param id="0" name="Platform">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-20" name="Set layout scale" sid="4774956635678114" type="System">
+                    <param id="0" name="Scale">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1421361735
+#1421534080
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -12,6 +12,12 @@ images/nowood-sheet0.png
 images/helpback-sheet0.png
 images/helpback-sheet1.png
 images/townsfolk-sheet0.png
+images/slexit-sheet0.png
+images/slexit-sheet1.png
+media/chop.ogg
+media/button.ogg
+media/cash.ogg
+media/error.ogg
 icon-16.png
 icon-32.png
 icon-114.png
